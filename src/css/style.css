@@ -1,0 +1,21 @@
+body {
+   color: #333333;
+   font-family: Georgia, Arial;
+   background-color: #DDDDDD;
+}
+
+.jumbotron {
+   height: 33vh;
+}
+
+footer {
+   background-color: #333333;
+}
+
+.flair {
+   width: 5rem;
+}
+
+.profile {
+   min-width: 5 rem;
+}
