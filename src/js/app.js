@@ -1,4 +1,5 @@
 'use strict';
+
 (async function () {  
     try {
       const data = await getData();
@@ -24,6 +25,17 @@
     }
 
     async function getData() {
+      try {
+        if(data !== undefined) {
+          console.log("Using cached version")
+          return JSON.parse(data);
+        }
+      } catch(error) {
+        // swallow exception
+      }
+
+      console.log("Not using cache");
+
       const response = await axios.get('https://api.tylerhyndman.com/data')
 
       if(response.status !== 200) {
